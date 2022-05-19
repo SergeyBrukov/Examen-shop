@@ -92,7 +92,7 @@ const ProductItem = ({ product }) => {
                         onClick={handlDeleteItemProduct}
                         className="change-delete-item-product-block__delete"
                       >
-                        <span class="icon-cross-small" />
+                        <span className="icon-cross-small" />
                       </StyledButton>
                     </div>
                     <div>
