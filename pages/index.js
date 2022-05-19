@@ -245,10 +245,10 @@ export default function Home({ products }) {
             color="black"
             position="start"
           >
-            There's never been an electric scooter quite like this. Speed past
-            traffic at 24 mph. Go up to 22 miles on a single charge. You'll get
+            Theres never been an electric scooter quite like this. Speed past
+            traffic at 24 mph. Go up to 22 miles on a single charge. Youll get
             there in no time at all. Stop and go with the roll of your thumb.
-            Its intuitive design means there’s almost no learning curve.
+            Its intuitive design means theres almost no learning curve.
           </StyledDescription>
           <div className="boosted-rev-info-block__btn">
             <StyledButton color="main" size="14" figure="circle">
