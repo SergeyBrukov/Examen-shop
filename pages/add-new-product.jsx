@@ -1,4 +1,5 @@
 import axios from "axios";
+import Head from "next/head";
 import React, { useState } from "react";
 import AlertMessage from "../components/alert/Alert";
 import InputGroup from "../components/inputGroup/InputGroup";

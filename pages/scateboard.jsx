@@ -4,6 +4,7 @@ import Pagination from "rc-pagination";
 import { useEffect, useState } from "react";
 import ProductCard from "../components/product-card/ProductCard";
 import { SkateboardWrapper } from "../styles/ScateboardPageStyle";
+import Head from "next/head";
 
 export const getStaticProps = async () => {
   const { data } = await axios.get(

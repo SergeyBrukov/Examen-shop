@@ -4,6 +4,7 @@ import Pagination from "rc-pagination";
 import { ScooterdWrapper } from "../styles/ScooterPageStyle";
 import { useEffect, useState } from "react";
 import InputGroup from "../components/inputGroup/InputGroup";
+import Head from "next/head";
 
 export const getStaticProps = async () => {
   const { data } = await axios.get(

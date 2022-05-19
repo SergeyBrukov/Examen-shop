@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 import AppContext from "../utils/context";
 import { useRouter } from "next/router";
 import {

@@ -1,4 +1,5 @@
 import Avtorised from "../components/autorized/Autorized";
+import Head from "next/head";
 
 const Autorized = () => {
   return (
