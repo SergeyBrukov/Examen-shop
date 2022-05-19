@@ -135,7 +135,7 @@ const Order = () => {
           {order &&
             order.map((orderItem) => {
               return (
-                <StyledOrderItemBlock>
+                <StyledOrderItemBlock key={orderItem.id}>
                   <Image
                     src={orderItem.imageUrl}
                     alt="Picture of the author"
