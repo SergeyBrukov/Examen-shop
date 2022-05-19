@@ -21,7 +21,6 @@ export const getStaticProps = async () => {
 
 const AddNewProduct = ({ product }) => {
   const [prodcut, setProduct] = useState(product);
-  const [success, setSuccess] = useState(false);
   const [editProductItem, setEditProductItem] = useState({
     title: "",
     description: "",
