@@ -50,7 +50,6 @@ const ProductItem = ({ product }) => {
     await axios.delete(
       `https://6271776925fed8fcb5e6a1e9.mockapi.io/product/product/${id}`
     );
-    // router.push("/");
     Router.back()
   };
 

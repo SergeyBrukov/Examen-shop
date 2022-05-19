@@ -6,7 +6,7 @@ import ProductCard from "../components/product-card/ProductCard";
 import { SkateboardWrapper } from "../styles/ScateboardPageStyle";
 import Head from "next/head";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const { data } = await axios.get(
     "https://6271776925fed8fcb5e6a1e9.mockapi.io/product/product"
   );
