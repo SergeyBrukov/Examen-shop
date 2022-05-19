@@ -22,7 +22,6 @@ export const getStaticProps = async () => {
 };
 
 const Scateboard = ({ skatebord }) => {
-
   const countPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const [collection, setCollerction] = useState(
@@ -30,8 +29,6 @@ const Scateboard = ({ skatebord }) => {
   );
   const [value, setValue] = useState("");
   const [total, setTotal] = useState(true);
-
-
 
   const updatePage = (p) => {
     setCurrentPage(p);
@@ -41,7 +38,7 @@ const Scateboard = ({ skatebord }) => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -61,18 +58,21 @@ const Scateboard = ({ skatebord }) => {
 
   return (
     <>
+      <Head>
+        <title>Scateboard</title>
+      </Head>
       <SkateboardWrapper size="sm" wrapper="content">
-      <div className="search-block">
-        <InputGroup
-          value={value}
-          type="search"
-          className="search-block__input"
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-          placeholder="Search product"
-        />
-      </div>
+        <div className="search-block">
+          <InputGroup
+            value={value}
+            type="search"
+            className="search-block__input"
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            placeholder="Search product"
+          />
+        </div>
         <div className="content-wrapper">
           {collection.map((skate) => {
             return <ProductCard key={skate.id} prod={skate} />;

@@ -40,92 +40,97 @@ const AddNewProduct = ({ product }) => {
     } catch {}
   };
   return (
-    <StyledNewProductWrapper>
-      <StyledNewProductContainer>
-        {success && (
-          <AlertMessage
-            center
-            type="success"
-            message="Product added successfully"
-          />
-        )}
-        <form onSubmit={addNewProduct}>
-          <InputGroup
-            label="Title"
-            defaultValue={editProductItem.title}
-            type="text"
-            onChange={(e) =>
-              setEditProductItem({
-                ...editProductItem,
-                title: e.target.value,
-              })
-            }
-            required
-          />
-          <InputGroup
-            label="Type"
-            defaultValue={editProductItem.type}
-            type="text"
-            onChange={(e) =>
-              setEditProductItem({
-                ...editProductItem,
-                type: e.target.value,
-              })
-            }
-            required
-          />
-          <InputGroup
-            type="text"
-            value={editProductItem.imageUrl}
-            label="ImageUrl"
-            onChange={(e) =>
-              setEditProductItem({
-                ...editProductItem,
-                imageUrl: e.target.value,
-              })
-            }
-          />
-          <InputGroup
-            type="text"
-            value={editProductItem.video}
-            label="Video"
-            onChange={(e) =>
-              setEditProductItem({
-                ...editProductItem,
-                video: e.target.value,
-              })
-            }
-            required
-          />
-          <InputGroup
-            as="textarea"
-            type="text"
-            value={editProductItem.description}
-            label="Description"
-            onChange={(e) =>
-              setEditProductItem({
-                ...editProductItem,
-                description: e.target.value,
-              })
-            }
-            required
-          />
-          <InputGroup
-            label="Price"
-            defaultValue={editProductItem.price}
-            type="text"
-            onChange={(e) =>
-              setEditProductItem({
-                ...editProductItem,
-                price: e.target.value,
-              })
-            }
-            required
-          />
-          <StyledButton color="success">Add product</StyledButton>
-        </form>
-      </StyledNewProductContainer>
-    </StyledNewProductWrapper>
+    <>
+      <Head>
+        <title>add-new-product</title>
+      </Head>
+      <StyledNewProductWrapper>
+        <StyledNewProductContainer>
+          {success && (
+            <AlertMessage
+              center
+              type="success"
+              message="Product added successfully"
+            />
+          )}
+          <form onSubmit={addNewProduct}>
+            <InputGroup
+              label="Title"
+              defaultValue={editProductItem.title}
+              type="text"
+              onChange={(e) =>
+                setEditProductItem({
+                  ...editProductItem,
+                  title: e.target.value,
+                })
+              }
+              required
+            />
+            <InputGroup
+              label="Type"
+              defaultValue={editProductItem.type}
+              type="text"
+              onChange={(e) =>
+                setEditProductItem({
+                  ...editProductItem,
+                  type: e.target.value,
+                })
+              }
+              required
+            />
+            <InputGroup
+              type="text"
+              value={editProductItem.imageUrl}
+              label="ImageUrl"
+              onChange={(e) =>
+                setEditProductItem({
+                  ...editProductItem,
+                  imageUrl: e.target.value,
+                })
+              }
+            />
+            <InputGroup
+              type="text"
+              value={editProductItem.video}
+              label="Video"
+              onChange={(e) =>
+                setEditProductItem({
+                  ...editProductItem,
+                  video: e.target.value,
+                })
+              }
+              required
+            />
+            <InputGroup
+              as="textarea"
+              type="text"
+              value={editProductItem.description}
+              label="Description"
+              onChange={(e) =>
+                setEditProductItem({
+                  ...editProductItem,
+                  description: e.target.value,
+                })
+              }
+              required
+            />
+            <InputGroup
+              label="Price"
+              defaultValue={editProductItem.price}
+              type="text"
+              onChange={(e) =>
+                setEditProductItem({
+                  ...editProductItem,
+                  price: e.target.value,
+                })
+              }
+              required
+            />
+            <StyledButton color="success">Add product</StyledButton>
+          </form>
+        </StyledNewProductContainer>
+      </StyledNewProductWrapper>
+    </>
   );
 };
 

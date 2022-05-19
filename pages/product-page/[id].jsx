@@ -2,6 +2,7 @@ import axios from "axios";
 import ProductItem from "../../components/productItem/ProductItem";
 import Skeleton from "react-loading-skeleton";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
@@ -21,17 +22,22 @@ const Product = ({ product }) => {
     }
   }, []);
   return (
-    <div>
-      {loading ? (
-        <Skeleton />
-      ) : (
-        <div>
-          {productId.map((product) => {
-            return <ProductItem key={product.id} product={product} />;
-          })}
-        </div>
-      )}
-    </div>
+    <>
+      <Head>
+        <title>{`product-page ${product.title}`}</title>
+      </Head>
+      <div>
+        {loading ? (
+          <Skeleton />
+        ) : (
+          <div>
+            {productId.map((product) => {
+              return <ProductItem key={product.id} product={product} />;
+            })}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

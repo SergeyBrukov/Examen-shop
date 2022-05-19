@@ -57,6 +57,9 @@ const Scooters = ({ scooters }) => {
 
   return (
     <>
+          <Head>
+        <title>Scooter</title>
+      </Head>
       <ScooterdWrapper>
         <div className="search-block">
           <InputGroup
