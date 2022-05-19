@@ -31,13 +31,11 @@ const AddNewProduct = ({ product }) => {
     video: "",
   });
   const addNewProduct = async (e) => {
-    e.preventDefault();
     try {
       await axios.post(
         "https://6271776925fed8fcb5e6a1e9.mockapi.io/product/product",
         editProductItem
       );
-      setSuccess(true);
     } catch {}
   };
   return (
@@ -47,13 +45,6 @@ const AddNewProduct = ({ product }) => {
       </Head>
       <StyledNewProductWrapper>
         <StyledNewProductContainer>
-          {success && (
-            <AlertMessage
-              center
-              type="success"
-              message="Product added successfully"
-            />
-          )}
           <form onSubmit={addNewProduct}>
             <InputGroup
               label="Title"
