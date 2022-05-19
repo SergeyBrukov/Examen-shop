@@ -1,5 +1,5 @@
 
-import Burger from '../Burger/Burger';
+import Burger from '../burger/Burger';
 
 const Navbar = () => {
   return (
