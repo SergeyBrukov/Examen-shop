@@ -55,7 +55,7 @@ const SlickSlider = ({ products }) => {
                   margin: "0px auto 10px",
                 }}
               >
-                <Image src={imageUrl} layout="fill" />
+                <Image src={imageUrl} layout="fill" alt="Picture of the author"/>
               </StyledImage>
               <Link href={`/product-page/${id}`}>
                 <StyledMainTitle

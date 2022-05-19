@@ -5,7 +5,7 @@ import { StyledGoCardBlock } from "./styledGoCard";
 const GoCarditem = ({ infoTitle, infoDescript, srcImage }) => {
   return (
     <StyledGoCardBlock>
-      <Image src={srcImage} objectFit="contain" />
+      <Image src={srcImage} objectFit="contain" alt="Picture of the author" />
       <StyledMainTitle
         size="36px"
         mb="25"

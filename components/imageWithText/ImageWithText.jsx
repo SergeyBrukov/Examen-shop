@@ -5,7 +5,7 @@ import { StyledImageTextContainer } from "./styledImageTextContainer";
 const Imagewithtext = ({ srcImage, titleInfo, descInfo, asTitle }) => {
   return (
     <StyledImageTextContainer>
-      <Image src={srcImage} objectFit="contain" />
+      <Image src={srcImage} objectFit="contain" alt="Picture of the author"/>
       <div className="image-text-container__info">
         <StyledMainTitle
           size="25"

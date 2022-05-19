@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="footer-explore-about-block">
         <StyledFooterContainer size="sm" wrapper="content">
           <div className="footer-explore-about-block-logo">
-            <Image src={FooterLogo} objectFit="contain" />
+            <Image src={FooterLogo} objectFit="contain" alt="Picture of the author"/>
           </div>
           <div className="footer-explore-about-block__explore">
             <StyledMainTitle
@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
         <div className="footer-author-payment-system__payment-system">
           {paymentSystem.map((src, index) => {
-            return <Image key={index} src={src.src} objectFit="contain" />;
+            return <Image key={index} src={src.src} objectFit="contain" alt="Picture of the author"/>;
           })}
         </div>
       </div>

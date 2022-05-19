@@ -17,7 +17,7 @@ const Header = () => {
         <Link href="/">
           <a>
             <StyledLogoWrapper>
-              <Image src={Logo} />
+              <Image src={Logo} alt="Picture of the author"/>
             </StyledLogoWrapper>
           </a>
         </Link>

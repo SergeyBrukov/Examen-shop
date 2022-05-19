@@ -68,7 +68,7 @@ export default function Home({ products }) {
     <StyledHomeWrapper height="auto">
       <StyledRectangleWrapper>
         <StyledBgImageContainer>
-          <Image src={background} />
+          <Image src={background} alt="Picture of the author"/>
         </StyledBgImageContainer>
         <StyledRectangleTextContainer>
           <div className="rectangle-title-info">
@@ -105,7 +105,7 @@ export default function Home({ products }) {
       <StyledBrandWrapper>
         <StyledBrandImageContainer>
           {brandsImage.map((src, index) => {
-            return <Image key={index + 1} src={src.srs} />;
+            return <Image key={index + 1} src={src.srs} alt="Picture of the author"/>;
           })}
         </StyledBrandImageContainer>
       </StyledBrandWrapper>
@@ -135,7 +135,7 @@ export default function Home({ products }) {
         <div className="line" />
         <StyledBoostedImageBlock>
           <div className="boosted-revs-block">
-            <Image src={BoostedRevs} />
+            <Image src={BoostedRevs} alt="Picture of the author"/>
             <div className="boosted-revs-block__info">
               <span className="icon-lightning"></span>
               <StyledMainTitle
@@ -159,7 +159,7 @@ export default function Home({ products }) {
             </div>
           </div>
           <div className="boosted-boards-block">
-            <Image src={BoostedBoards} />
+            <Image src={BoostedBoards} alt="Picture of the author"/>
             <div className="boosted-boards-block__info">
               <span className="icon-lightning"></span>
               <StyledMainTitle
@@ -186,7 +186,7 @@ export default function Home({ products }) {
       </StyledBosterBoardRevsWrapper>
       <StyledElectricSkateBoardsWrapper>
         <StyledBgImageContainer  className="electric-skateboard-image-block">
-          <Image src={backgroundElectricSkateBoards} />
+          <Image src={backgroundElectricSkateBoards} alt="Picture of the author"/>
         </StyledBgImageContainer>
         <div className="electric-skateboard-info-block">
           <StyledDescription
@@ -227,8 +227,8 @@ export default function Home({ products }) {
         </div>
       </StyledElectricSkateBoardsWrapper>
       <StyledBoostedRevWrapper size="mm" wrapper="content">
-        <Image src={BoostedRevOne} />
-        <Image src={BoostedRevTwo} />
+        <Image src={BoostedRevOne} alt="Picture of the author" />
+        <Image src={BoostedRevTwo} alt="Picture of the author" />
         <div className="boosted-rev-info-block">
           <StyledMainTitle
             size="32"
@@ -260,17 +260,20 @@ export default function Home({ products }) {
       <StyledBoostedStockShopWrapper>
         <Imagewithtext
           srcImage={BoostedStealth}
+          alt="Picture of the author"
           asTitle="h2"
           titleInfo="Shop Boosted Stealth"
           descInfo="IN STOCK"
         />
         <Imagewithtext
+          alt="Picture of the author"
           srcImage={BoostedPlus}
           asTitle="h2"
           titleInfo="Shop Boosted Plus"
           descInfo="IN STOCK"
         />
         <Imagewithtext
+          alt="Picture of the author"
           srcImage={BoostedMini}
           asTitle="h2"
           titleInfo="Shop Boosted Mini"

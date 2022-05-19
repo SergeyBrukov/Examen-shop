@@ -27,7 +27,7 @@ const Scooters = ({ scooters }) => {
     scooters.slice(0, countPerPage)
   );
   const [total, setTotal] = useState(true);
-  const [value, setValue] = useState("")
+  const [value, setValue] = useState("");
 
   const updatePage = (p) => {
     setCurrentPage(p);
@@ -37,27 +37,27 @@ const Scooters = ({ scooters }) => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   useEffect(() => {
-    if(value.length === 0) {
-        setCollerction(scooters.slice(0, countPerPage))
-        setTotal(true)
+    if (value.length === 0) {
+      setCollerction(scooters.slice(0, countPerPage));
+      setTotal(true);
     } else {
-        setCollerction(
-            scooters.filter((item) => {
-                return item.title.toLowerCase().includes(value.toLowerCase())
-            })
-        )
-        setTotal(false)
+      setCollerction(
+        scooters.filter((item) => {
+          return item.title.toLowerCase().includes(value.toLowerCase());
+        })
+      );
+      setTotal(false);
     }
-  }, [value])
+  }, [value]);
 
   return (
     <>
-          <Head>
+      <Head>
         <title>Scooter</title>
       </Head>
       <ScooterdWrapper>

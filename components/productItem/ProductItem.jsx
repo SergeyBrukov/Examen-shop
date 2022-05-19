@@ -82,6 +82,7 @@ const ProductItem = ({ product }) => {
                   src={imageUrl}
                   layout="fill"
                   className="product-page_cover"
+                  alt="Picture of the author"
                 />
                 {user?.email === "sdiomant@itlab-studio.com" ? (
                   <div className="change-delete-item-product-block">
