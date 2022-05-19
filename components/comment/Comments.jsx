@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 const Comments = ({ product }) => {
   const { comment } = product;
-  console.log(product);
   const [prod, setProd] = useState([]);
   const onComent = (id, text) => {
     setPosts((prev) =>

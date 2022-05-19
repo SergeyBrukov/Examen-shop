@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import AlertMessage from "../components/alert/Alert";
 import InputGroup from "../components/inputGroup/InputGroup";
 import { StyledButton } from "../components/styles/styledButtons";
 import {
@@ -18,23 +19,36 @@ export const getStaticProps = async () => {
 };
 
 const AddNewProduct = ({ product }) => {
-  const [prodcut, setProduct] = useState(product)
+  const [prodcut, setProduct] = useState(product);
+  const [success, setSuccess] = useState(false);
   const [editProductItem, setEditProductItem] = useState({
     title: "",
     description: "",
     price: "",
     imageUrl: "",
     type: "",
-    video: ""
+    video: "",
   });
-console.log(product)
-  const addNewProduct = async(e) => {
-    await axios.post("https://6271776925fed8fcb5e6a1e9.mockapi.io/product/product",editProductItem)
+  const addNewProduct = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post(
+        "https://6271776925fed8fcb5e6a1e9.mockapi.io/product/product",
+        editProductItem
+      );
+      setSuccess(true);
+    } catch {}
   };
-  console.log(product)
   return (
     <StyledNewProductWrapper>
       <StyledNewProductContainer>
+        {success && (
+          <AlertMessage
+            center
+            type="success"
+            message="Product added successfully"
+          />
+        )}
         <form onSubmit={addNewProduct}>
           <InputGroup
             label="Title"
@@ -46,6 +60,7 @@ console.log(product)
                 title: e.target.value,
               })
             }
+            required
           />
           <InputGroup
             label="Type"
@@ -57,6 +72,7 @@ console.log(product)
                 type: e.target.value,
               })
             }
+            required
           />
           <InputGroup
             type="text"
@@ -69,7 +85,7 @@ console.log(product)
               })
             }
           />
-                    <InputGroup
+          <InputGroup
             type="text"
             value={editProductItem.video}
             label="Video"
@@ -79,6 +95,7 @@ console.log(product)
                 video: e.target.value,
               })
             }
+            required
           />
           <InputGroup
             as="textarea"
@@ -91,6 +108,7 @@ console.log(product)
                 description: e.target.value,
               })
             }
+            required
           />
           <InputGroup
             label="Price"
@@ -102,6 +120,7 @@ console.log(product)
                 price: e.target.value,
               })
             }
+            required
           />
           <StyledButton color="success">Add product</StyledButton>
         </form>
