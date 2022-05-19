@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsLightningChargeFill } from "react-icons/Bs";
+import { BsLightningChargeFill } from "react-icons/bs";
 import { StyledStarBlock } from "./styledStarRating";
 
 const StarRating = () => {
