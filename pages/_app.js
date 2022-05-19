@@ -44,7 +44,6 @@ const MyApp = ({ Component, pageProps }) => {
 
   const addProdBasket = (item) => {
     if (basket?.find((i) => i.id === item.id)) {
-      console.log("This product is basket");
     } else {
       setBasket([...basket, item]);
       localStorage.setItem("basket", JSON.stringify([...basket, item]));

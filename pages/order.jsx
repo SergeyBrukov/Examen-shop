@@ -21,7 +21,6 @@ import axios from "axios";
 
 const Order = () => {
   const user = useAuth();
-  console.log(user && user.email);
   const { setOrder, order, setBasket } = useContext(AppContext);
   const [loading, setLoading] = useState(false)
 
